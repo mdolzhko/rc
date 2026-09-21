@@ -5,9 +5,9 @@ Bluetooth, instead of the official Shell Racing app.
 
 ## Status
 
-Early stage. The repository currently contains a placeholder landing page
-(`index.html`). Working prototypes exist locally but are not yet part of
-this repository.
+Early stage. `index.html` is a working single-file prototype: connect,
+protocol auto-detection, keyboard/on-screen controls, battery level, and
+a debug log.
 
 ## Requirements
 
@@ -17,7 +17,20 @@ this repository.
 
 ## Running locally
 
-Open `index.html` in a supported browser.
+Web Bluetooth requires a secure context, so opening `index.html` directly
+as a `file://` URL will not work — `navigator.bluetooth` needs `https://`
+or `http://localhost`.
+
+Until this project has a proper dev server (planned as part of the
+Next.js migration below), serve the file locally with:
+
+```
+npx serve
+```
+
+This downloads and runs the [`serve`](https://www.npmjs.com/package/serve)
+package on demand (no global install) and starts a static file server at
+`http://localhost:3000`. Open that URL in Chrome or Edge.
 
 ## Roadmap
 
