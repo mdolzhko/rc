@@ -22,3 +22,5 @@ build/
 # project-specific: local notes and AI context, not published
 .notes/
 CLAUDE.md
+.vercel
+.env*
